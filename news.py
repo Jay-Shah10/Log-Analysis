@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 """
-This projec is about testing psql queries.
+This project is about testing psql queries.
 This program is will answer three question as per project description.
 
 1. what are the three most popular articles of all time?
@@ -52,11 +52,10 @@ def get_result_of_one(conn):
     """
     cursor.execute(query_one)
     record = cursor.fetchall()
-    
-    print "Result of One"
+    print "Result of 1:"
     for result in record:
-        print result[0], '-', result[1] # update to the output format.
-    # print "result to 1:", record
+        # updated output format.
+        print '"%s" - %d views' % (result[0], result[1])
 
 
 def get_result_of_two(conn):
@@ -81,8 +80,9 @@ def get_result_of_two(conn):
     cursor.execute(query_two)
     print "Result of 2: "
     record = cursor.fetchall()
-    for data in record:
-        print data[0], '-', data[1] # update to the output format.
+    for data in record:  # updated output from suggestion.
+        print '"{article}" - {views} views'.format(article=data[0],
+                                                   views=data[1])
 
 
 def get_result_of_three(conn):
@@ -104,7 +104,9 @@ def get_result_of_three(conn):
     print "Result of 3:"
     record = cursor.fetchall()
     for data in record:
-        print data[0], '-', data[1] # updated output format.
+        # updated output format.
+        print "Date: {date} - {per} %".format(date=data[0],
+                                              per=round(data[1], 2))
 
 
 def get_result_of_all(conn):
