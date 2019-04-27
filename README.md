@@ -21,7 +21,7 @@ pip install psycopg2
 You will need to first install vagrant.  
 You can download from this [link](https://www.vagrantup.com/downloads.html). Once this is done, Udactiy provides the data for the news data. This will need to unzipped in the vagrant dir. 
 
-Once you have vagrant is downloaded and data unzipped, you can activate vagrant with the following steps. 
+Once you have vagrant downloaded and data unzipped, you can activate vagrant with the following steps. 
 
 ```
 vagrant up - to start you vm.
@@ -42,8 +42,8 @@ psql - The Postgresql command line.
 -d news - connect to the database named news (This is provided from Udacity).  
 -f newsdata.sql - run the sql statements in the file newsdata.sql  
 
-Once you have configured your workspace, you can then move on to develop your query and python program.  
-You can test out the queries you can run the following command: 
+Once you have configured your workspace, you can then move on to developing your query and python program.  
+You can test out the queries by running the following command: 
 ```
 psql news
 you will be able to run SELECT commands. 
@@ -61,7 +61,7 @@ Type the following command:
 ```
 python news.py 
 ```
-You will be prompted with four options. 1-3 will allow you to execute individual quries - 4- will execute all three quries. 
+You will be prompted with four options. Options 1-3 will allow you to execute individual query. Option 4- will execute all three quries. 
 Keep in mind that theses results take a little time to display.
 
 
